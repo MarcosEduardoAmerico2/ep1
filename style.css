@@ -53,6 +53,7 @@ body{
     justify-content: center;
     padding: 30px;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 /* Estilos para os cards */
@@ -65,6 +66,7 @@ body{
     box-shadow: 10px 10px 9px rgb(92, 92, 92);
     transition: 0.5s;
     flex-wrap: wrap;
+
 }
 
 .texto a{
@@ -102,7 +104,7 @@ body{
 }
 
 /* Estilos de responsividade para telas menores */
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px){ logo
     body{
         grid-template-areas: 
         "cabe"
