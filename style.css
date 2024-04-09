@@ -63,7 +63,7 @@ body{
     width: 300px;
     margin: 20px;
     text-align: center;
-    box-shadow: 10px 10px 9px rgb(92, 92, 92);
+    box-shadow: 7px 7px 5px rgb(92, 92, 92);
     transition: 0.5s;
     flex-wrap: wrap;
 
