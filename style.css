@@ -87,7 +87,7 @@ body{
 
 .text a{
     display: inline-block;
-    background-color: black;
+    background-color: cornflowerblue;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -103,6 +103,14 @@ body{
     width: 245px;
 }
 
+.imagem1{
+    width: 650px;
+    margin-right: 700px;
+}
+
+.tx{
+    margin-left: -.025em;
+}
 /* Estilos de responsividade para telas menores */
 @media only screen and (max-width: 800px){ logo
     body{
@@ -131,19 +139,6 @@ body{
     footer{
         display: none;
     }
-}
-
-/* Estilos para o botão de finalização da compra no carrinho */
-.fimcompra{
-    display: inline-block;
-    background-color: gray;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 20px;
 }
 
 /* Estilos para elementos de produtos */
