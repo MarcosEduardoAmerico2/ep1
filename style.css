@@ -10,6 +10,14 @@
 body{
     display: grid;
     grid-template-areas: 
+    "cabe cabe cabe"
+    "aside prin prin"
+    "roda roda roda";
+}
+
+.body_1{
+    display: grid;
+    grid-template-areas: 
     "cabe cabe"
     "prin prin"
     "roda roda";
@@ -22,6 +30,35 @@ body{
     text-align: center;
 }
 
+/*Estilo do cabeçalho carrinho*/
+.cabe_1{
+    grid-area: cabe;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+/*Estiço do Aside*/
+.aside{
+    background-color: rgb(58, 58, 58);
+}
+
+.card_1{
+    border-radius: 20px;
+    padding: 10px;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 7px 7px 5px black;
+    transition: 0.5s;
+    flex-wrap: wrap;
+    color: rgb(245, 241, 241);
+}
+
+.card_1:hover a{
+    background-color: rgb(75, 75, 75);
+    color: white;
+}
+
 /* Estilos do conteúdo principal */
 .prin{
     grid-area: prin;
@@ -32,7 +69,7 @@ body{
 /* Estilos do rodapé */
 .roda{
     grid-area: roda;
-    background-color: black;
+    background-color: rgb(58, 58, 58);
     text-align: center;
     color: white;
 }
@@ -42,9 +79,112 @@ body{
     position: absolute;
 }
 
+/*Estilo de navegação carrinho*/
+.head_1{
+    position: absolute;
+}
+
 /* Estilos do logotipo */
 .logo{
     width: 230px;
+}
+
+/* Estilos do ícone de carrinho */
+.cesta{
+    width: 50px;
+    position: relative;
+}
+
+/*cor texto*/
+.promocao{
+    color: rgb(165, 31, 31);
+    text-align: center;
+}
+/* Estilos do menu de navegação */
+nav{
+    position: relative;
+    top: 0px;
+    right: 0px;
+}
+
+/* Estilos para os itens do menu de navegação */
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+/* Estilos para o menu móvel */
+.nav_mobile ul{
+    list-style: none;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+
+/* Estilos para os ícones no menu móvel */
+.nav_mobile img{
+    width: 40px;
+}
+
+/* Esconde o checkbox utilizado para o menu móvel */
+.nav_mobile input[type="checkbox"]{
+    display: none;
+}
+
+/* Estilos para o menu de navegação móvel */
+.nav_mobile nav{
+    background-color: white;
+    border: black solid;
+    width: 350px;
+    height: 100vh;
+    position: absolute;
+    left: -350px;
+    transition: all 0.6s;
+}
+
+/* Estilos para os links no menu móvel */
+.nav_mobile a{
+    position: relative;
+    display: block;
+    padding: 20pxscreen 5px;
+    text-decoration: none;
+}
+
+/* Estilos para a label do menu móvel */
+.nav_mobile label{
+    position: relative;
+    z-index: 1;
+}
+
+/* Controla a abertura do menu móvel */
+.nav_mobile input[type="checkbox"]:checked ~ nav{
+    transform: translateX(350px);
+}
+
+/* Define estilo para todas as labels no documento */
+label{
+    font-weight: bold;
+}
+
+/* Estilos para o formulário */
+form {
+    display: inline-block;
+    width: 300px;
+    border: black solid 2px;
+}
+
+/* Estilos para as labels dentro do formulário */
+form label {
+    display:block;
+    font-size: 20px;
+}
+
+/* Estilos para os inputs dentro do formulário */
+form input {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 100%;
 }
 
 /* Estilos para o contêiner de cards */
@@ -67,13 +207,12 @@ body{
     transition: 0.5s;
     flex-wrap: wrap;
     color: rgb(34, 34, 34);
-
 }
 
 .texto a{
     display: block;
     padding: 10px 20px;
-    background-color: cornflowerblue;
+    background-color: rgb(133, 77, 133);
     color: white;
     border-radius: 20px;
     text-decoration: none;
@@ -107,6 +246,7 @@ body{
 .imagem1{
     width: 650px;
     margin-right: 700px;
+    justify-content: center;
 }
 
 .tx{
@@ -118,12 +258,12 @@ body{
         grid-template-areas: 
         "cabe"
         "prin"
-        "prin"
-        "prin"
-        "prin"
         "roda";
         grid-template-columns: 1fr;
         grid-template-rows: 200px 50px 500px 200px;
+    }
+    aside{
+        display: none;
     }
 }
 
@@ -136,13 +276,99 @@ body{
         "roda";
         grid-template-columns: 1fr;
         grid-template-rows: 100px 500px 100px;
+    }
+    aside{
+        display: none;
     }    
     footer{
         display: none;
     }
 }
 
+/* Estilos para o carrinho de compras */
+.carrinho{
+    width: 250px;
+    border: black solid 4px;
+    border-radius: 10%;
+    display: flex;
+}
+
+/* Estilos para os itens no carrinho */
+.cart-item{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 4px solid black;
+}
+
+/* Estilos para imagens dos itens no carrinho */
+.cart-item img{
+    max-width: 250px;
+    margin-right: 10px;
+}
+
+/* Estilos para informações dos itens no carrinho */
+.cart-info{
+    flex: 1;
+}
+
+/* Estilos para os títulos dos itens no carrinho */
+.cart-title{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Estilos para o preço dos itens no carrinho */
+.cart-price{
+    font-size: 30px;
+    color: black;
+}
+
+/* Estilos para os botões de quantidade no carrinho */
+.menos,
+.mais{
+    border-color: black;
+    width: 20px;
+}
+
+/* Estilos para o preço total no carrinho */
+.total-price{
+    font-size: 24px;
+    color: black;
+}
+
+/* Estilos para o botão de finalização da compra no carrinho */
+.fimcompra{
+    display: inline-block;
+    background-color: rgb(133, 77, 133);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Estilos para os ícones de formas de pagamento */
+.pagamentos{
+    background-color: white;
+    display: inline;
+}
+
 /* Estilos para elementos de produtos */
 .produto{
-    width: 250px;
+    width: 450px;
+}
+/*enviar formulario */
+.enviar{
+    background-color: rgb(133, 77, 133);
+    color: white;
+    border-radius: 5px;
+    width: 80px;
+}
+/*fonte produto */
+.desk{
+    font-size: 21px;
+    color: black;
 }
