@@ -93,6 +93,7 @@ body{
 .cesta{
     width: 50px;
     position: relative;
+    margin: 10px;
 }
 
 /*cor texto*/
@@ -170,7 +171,6 @@ label{
 form {
     display: inline-block;
     width: 300px;
-    border: black solid 2px;
 }
 
 /* Estilos para as labels dentro do formulário */
@@ -364,11 +364,25 @@ form input {
 .enviar{
     background-color: rgb(133, 77, 133);
     color: white;
-    border-radius: 5px;
-    width: 80px;
+    border-radius: 15px;
+    width: 100%;
+    height: 54px;
+    cursor: pointer;
 }
 /*fonte produto */
 .desk{
     font-size: 21px;
     color: black;
 }
+.promocao{ 
+    text-decoration: none; 
+    background-color: #6F428C; 
+    padding: 15px 15px; 
+    color: white; }   
+    
+#copyright{
+    margin: 20px;
+}
+     
+
+  
